@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<script language="JavaScript">
+<!--
+function FP_swapImg() {//v1.0
+ var doc=document,args=arguments,elm,n; doc.$imgSwaps=new Array(); for(n=2; n<args.length;
+ n+=2) { elm=FP_getObjectByID(args[n]); if(elm) { doc.$imgSwaps[doc.$imgSwaps.length]=elm;
+ elm.$src=elm.src; elm.src=args[n+1]; } }
+}
+
+function FP_preloadImgs() {//v1.0
+ var d=document,a=arguments; if(!d.FP_imgs) d.FP_imgs=new Array();
+ for(var i=0; i<a.length; i++) { d.FP_imgs[i]=new Image; d.FP_imgs[i].src=a[i]; }
+}
+
+function FP_getObjectByID(id,o) {//v1.0
+ var c,el,els,f,m,n; if(!o)o=document; if(o.getElementById) el=o.getElementById(id);
+ else if(o.layers) c=o.layers; else if(o.all) el=o.all[id]; if(el) return el;
+ if(o.id==id || o.name==id) return o; if(o.childNodes) c=o.childNodes; if(c)
+ for(n=0; n<c.length; n++) { el=FP_getObjectByID(id,c[n]); if(el) return el; }
+ f=o.forms; if(f) for(n=0; n<f.length; n++) { els=f[n].elements;
+ for(m=0; m<els.length; m++){ el=FP_getObjectByID(id,els[n]); if(el) return el; } }
+ return null;
+}
+// -->
+</script>
+
+</head>
+<body bgcolor="#FFFFCC" onload="FP_preloadImgs(/*url*/'button73.jpg', /*url*/'button74.jpg')" >
+
+<h2 align="left"><font size="6">International Tourism Site</font></h2>
+
+<hr>
+<p align="center">
+<img border="0" src="nature-2-26-17.jpg" width="1469" height="345"></p>
+<table border="0" width="98%" bgcolor="#00CC00">
+	<tr>
+		<td align="center" width="249"><b><span dir="ltr"><font size="4">
+		<a href="Home.htm"><font color="#000000">Home</font></a></font></span></b></td>
+		<td align="center"><b><span dir="ltr"><font size="4">
+		<a href="Season.htm"><font color="#000000">Season Tourism</font></a></font></span></b></td>
+		<td align="center"><b><span dir="ltr"><font size="4">
+		<a href="Aboutus.htm"><font color="#000000">About us</font></a></font></span></b></td>
+		<td align="center"><b><span dir="ltr"><font size="4">
+		<a href="photo.htm"><font color="#000000">Photography</font></a></font></span></b></td>
+	</tr>
+</table>
+
+
+
+
+<p><font color="#800000"><span style="background-color: #00CC00">
+<marquee bgcolor="#FFFFCC" style="font-size: 14pt; font-style: italic; font-weight: bold">Welcome to The World Tourism</marquee></span></font></p>
+<hr>
+<p><font size="6">International Tourism Site is a tourism site that classified the famous tourism cities or countries based on the season: Summer, Autumn, Winter and Spring. 
+The site has multiple pages that mentioned in the menu. </font> </p>
+<p> <font size="6">The guest can search for some specific places&nbsp;&nbsp;
+</font></p>
+<p> <font size="5">&nbsp;If you interested in our website fill the Survey </font>
+<a href="Survey.htm"><font size="5">click here</font></a></p>
+<table border="0" width="100%">
+	<tr>
+		<td>
+		<p align="center">&nbsp;</td>
+		<td align="center"><a href="Season.htm"><select size="1" name="Seelct Season">
+	<option selected>Select one</option>
+	<option>Autumn</option>
+	<option>Winter</option>
+	<option>Spring</option>
+	<option>Summer</option>
+	</select><input type="submit" value="Select Season" name="B1"></a><input type="reset" value="Reset" name="B2"></td>
+	</tr>
+</table>
+<p align="center"><a href="Season.htm">
+<img border="0" id="img1" src="button72.jpg" height="25" width="127" alt="Next" fp-style="fp-btn: Border Bottom 3; fp-font-size: 14; fp-bgcolor: #FFFF00" fp-title="Next" onmouseover="FP_swapImg(1,0,/*id*/'img1',/*url*/'button73.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img1',/*url*/'button72.jpg')" onmousedown="FP_swapImg(1,0,/*id*/'img1',/*url*/'button74.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img1',/*url*/'button73.jpg')"></a></p>
+
+
+
+</body>
+</html>
